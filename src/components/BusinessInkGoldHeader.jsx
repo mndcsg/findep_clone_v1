@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const BusinessInkGoldHeader = () => {
   // 模拟菜单数据，包含实际跳转链接
@@ -143,10 +144,10 @@ const BusinessInkGoldHeader = () => {
   return (
     <header style={styles.container}>
       {/* Logo Area */}
-      <a href="/" style={styles.logo}>
+      <Link to="/" style={styles.logo}>
         <div style={styles.logoPlaceholder}>LOGO</div>
         <span>company name</span>
-      </a>
+      </Link>
 
       {/* Navigation */}
       <nav style={styles.nav}>
