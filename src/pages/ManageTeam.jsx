@@ -40,7 +40,7 @@ const ManageTeam = () => {
       <main style={styles.content}>
         {/* Banner - Full Width */}
         <BusinessInkGoldBanner 
-  image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070"
+  image="./1920x300_2.png"
   title="Equipo Directivo"
   description="Liderazgo con experiencia y solidez financiera"
 />   

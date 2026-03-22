@@ -83,7 +83,7 @@ const DiviDendos = () => {
       <main style={styles.content}>
         {/* Banner - Full Width */}
         <BusinessInkGoldBanner 
-          image="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070"
+          image="./1920x300_3.png"
           title="Información de la Acción y Dividendos"
           description="Datos actualizados de la acción, rentabilidad y pagos de dividendos para inversionistas."
         />

@@ -61,7 +61,7 @@ const History = () => {
       <main style={styles.content}>
         {/* Banner - Full Width */}
         <BusinessInkGoldBanner 
-  image="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2070"
+  image="./1920x300_1.png"
   title="Nuestra Historia"
   description="Trayectoria y Compromiso Financiero"
 />

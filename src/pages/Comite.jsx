@@ -83,7 +83,7 @@ const Comite = () => {
       <main style={styles.content}>
         {/* Banner - Full Width */}
         <BusinessInkGoldBanner 
-          image="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070"
+          image="./1920x300_2.png"
           title="Comités del Consejo"
           description="Estructura especializada para una gestión sólida y transparente"
         />
@@ -108,7 +108,7 @@ const Comite = () => {
             {/* Right Column - Image */}
             <div style={styles.rightColumn}>
               <img 
-                src="https://placehold.co/500x400/1A2332/D4B16A/png?text=Comité"
+                src="./800x400_2.png"
                 alt="Comité de Auditoría"
                 style={styles.sideImage}
               />

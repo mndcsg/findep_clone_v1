@@ -69,7 +69,7 @@ const Plot = () => {
       <main style={styles.content}>
         {/* Banner - Full Width */}
         <BusinessInkGoldBanner 
-          image="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070"
+          image="./1920x300_3.png"
           title="Gráfica Histórica"
           description="Evolución y datos clave de la acción en tiempo real"
         />

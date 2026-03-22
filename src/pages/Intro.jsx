@@ -99,7 +99,7 @@ const Intro = () => {
       <main style={styles.content}>
         {/* Banner - Full Width */}
         <BusinessInkGoldBanner 
-          image="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2070"
+          image="./1920x300_1.png"
           title="Conócenos"
           description="Sobre Nuestra Empresa"
         /> 
@@ -124,21 +124,21 @@ const Intro = () => {
   title="Proceso Optimizado"
   description="Proceso completamente en línea con procedimientos estandarizados y productos cumpliendo todas las normativas vigentes. Optimización continua de la experiencia del usuario."
   imagePosition="left"
-  imageUrl="https://placehold.co/1920x400/1A2332/FFFFFF/png?text=image"
+  imageUrl="./1920x800_2.png"
 />
 
 <BusinessInkGoldInfoBlock 
   title="Seguridad Inteligente"
   description="Sistema inteligente de control de riesgos con IA y tecnología anti-fraude avanzada. Políticas estrictas de seguridad de información."
   imagePosition="right"
-  imageUrl="https://placehold.co/1920x400/1A2332/FFFFFF/png?text=image"
+  imageUrl="./1920x800_3.png"
 />
 
 <BusinessInkGoldInfoBlock 
   title="Servicio Eficiente"
   description="Servicio al cliente rápido y eficiente disponible en múltiples canales. Equipo profesional con soporte 24/7."
   imagePosition="left"
-  imageUrl="https://placehold.co/1920x400/1A2332/FFFFFF/png?text=image"
+  imageUrl="./1920x800_1.png"
 />
           
           {/* TextCard - 使命与愿景 */}

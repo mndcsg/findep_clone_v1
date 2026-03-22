@@ -113,7 +113,7 @@ const Analistas = () => {
       <main style={styles.content}>
         {/* Banner - Full Width */}
         <BusinessInkGoldBanner 
-          image="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974"
+          image="./1920x300_3.png"
           title="Cobertura de Analistas"
           description=""
         />

@@ -98,7 +98,7 @@ const Social = () => {
       <main style={styles.content}>
         {/* Banner - Full Width */}
         <BusinessInkGoldBanner 
-          image="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070"
+          image="1920x300_4.png"
           title="Responsabilidad Social"
           description="Compromiso con México y su Comunidad"
         />
