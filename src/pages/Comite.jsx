@@ -1,18 +1,31 @@
+// Comite.js
 import React from 'react';
-import BusinessInkGoldHeader from '../components/BusinessInkGoldHeader';
-import BusinessInkGoldFooter from '../components/BusinessInkGoldFooter';
-import BusinessInkGoldBanner from '../components/BusinessInkGoldBanner';
-import BusinessInkGoldWideCard from '../components/BusinessInkGoldWideCard';
-import BusinessInkGoldTable from '../components/BusinessInkGoldTable';
+import Header from '../components_v2/Header';
+import Footer from '../components_v2/Footer';
+import Banner from '../components_v2/Banner';
+import WideCard from '../components_v2/WideCard';
+import Table from '../components_v2/Table';
+import SectionTitle from '../components_v2/SectionTitle';
+import { theme } from '../components_v2/theme';
 
 const Comite = () => {
+  // 表格数据 - 转换为 Table 组件格式
+  const tableHeaders = ['Comités de Auditoría y Prácticas Societarias', 'Rol'];
+  
+  const tableData = [
+    ['Carlos Javier de la Paz Mena', 'Consejero Propietario (independiente)'],
+    ['José Ramón Elizondo Anaya', 'Consejero Propietario (independiente)'],
+    ['Héctor Ángel Rodríguez Acosta', 'Consejero Propietario (independiente)'],
+    ['Juan García Madrigal', 'Coordinador']
+  ];
+
   const styles = {
     main: {
       width: '100%',
       display: 'flex',
       flexDirection: 'column',
-      fontFamily: "'Inter', sans-serif",
-      overflowX: 'hidden' 
+      fontFamily: "'Roboto', sans-serif",
+      overflowX: 'hidden'
     },
     content: {
       flex: 1,
@@ -20,105 +33,131 @@ const Comite = () => {
     },
     centeredContainer: {
       maxWidth: '1400px',
-      width:'100%',
+      width: '100%',
       margin: '0 auto',
-      padding: '0 20px',
+      padding: '60px 24px',
       boxSizing: 'border-box',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center'
     },
-    // Two-column layout container
+    section: {
+      width: '100%',
+      // marginBottom: '60px'
+    },
+    // 两列布局容器
     twoColumnContainer: {
       width: '100%',
       display: 'flex',
-      gap: '10px',
-      margin: '40px auto',
-      boxSizing: 'border-box'
+      gap: '40px',
+      margin: '40px 0',
+      boxSizing: 'border-box',
+      flexWrap: 'wrap'
     },
     leftColumn: {
       flex: '1',
-      minWidth: '0'
+      minWidth: '300px'
     },
     rightColumn: {
       flex: '1',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      minWidth: '300px'
     },
     sideImage: {
       width: '100%',
-      maxWidth: '600px',
-      borderRadius: '2px',
-      boxShadow: '0 4px 12px rgba(26, 35, 50, 0.1)'
+      maxWidth: '500px',
+      borderRadius: '8px',
+      boxShadow: theme.shadows.card
+    },
+    // 高亮文本样式
+    highlight: {
+      color: theme.colors.accentOchre,
+      fontWeight: '600'
     }
   };
 
-  // 公司简介数据
-  const companyIntroContent = [
-    [{ text: 'El ', highlight: false }, { text: 'Comité de Gobierno Corporativo', highlight: true }, { text: ' es un órgano consultivo fundamental del Consejo.', highlight: false }],
-    [{ text: 'Se encarga de evaluar y proponer las ', highlight: false }, { text: 'políticas de gobierno corporativo', highlight: true }, { text: ' de la entidad.', highlight: false }],
-    [{ text: 'Asesora sobre la ', highlight: false }, { text: 'integración, composición y renovación', highlight: true }, { text: ' del Consejo de Administración.', highlight: false }],
-    [{ text: 'Garantiza el ', highlight: false }, { text: 'cumplimiento normativo y la transparencia', highlight: true }, { text: ' en la gestión corporativa.', highlight: false }]
-  ];
-  
-  const auditCommitteeHeaders = [
-    { key: 'name', label: 'Comités de Auditoría y Prácticas Societarias'},
-    { key: 'role', label: 'Rol' }
-  ];
-
-  const auditCommitteeData = [
-    { name: 'Carlos Javier de la Paz Mena', role: 'Consejero Propietario (independiente)' },
-    { name: 'José Ramón Elizondo Anaya', role: 'Consejero Propietario (independiente)' },
-    { name: 'Héctor Ángel Rodríguez Acosta', role: 'Consejero Propietario (independiente)' },
-    { name: 'Juan García Madrigal', role: 'Coordinador' }
-  ];
-
   return (
     <div style={styles.main}>
-      {/* Header - Full Width */}
-      <BusinessInkGoldHeader />
+      {/* Header */}
+      <Header />
       
       {/* Main Content */}
       <main style={styles.content}>
-        {/* Banner - Full Width */}
-        <BusinessInkGoldBanner 
-          image="./1920x300_2.png"
+        
+        {/* Banner */}
+        <Banner 
+          image="./photo-1556761175-b413da4baf72.jpeg"
           title="Comités del Consejo"
           description="Estructura especializada para una gestión sólida y transparente"
         />
         
-        {/* Centered Content Wrapper */}
+        {/* 委员会简介 */}
         <div style={styles.centeredContainer}>
-          <BusinessInkGoldWideCard 
-            title=""
-            content={companyIntroContent}
+          <SectionTitle 
+            title="Gobierno Corporativo" 
+            subtitle="COMITÉS ESPECIALIZADOS"
+            align="center"
           />
+          <WideCard align="left">
+            <p style={{ marginBottom: '24px', lineHeight: '1.8' }}>
+              El{' '}
+              <strong style={styles.highlight}>Comité de Gobierno Corporativo</strong>{' '}
+              es un órgano consultivo fundamental del Consejo.
+            </p>
+            <p style={{ marginBottom: '24px', lineHeight: '1.8' }}>
+              Se encarga de evaluar y proponer las{' '}
+              <strong style={styles.highlight}>políticas de gobierno corporativo</strong>{' '}
+              de la entidad.
+            </p>
+            <p style={{ marginBottom: '24px', lineHeight: '1.8' }}>
+              Asesora sobre la{' '}
+              <strong style={styles.highlight}>integración, composición y renovación</strong>{' '}
+              del Consejo de Administración.
+            </p>
+            <p style={{ lineHeight: '1.8' }}>
+              Garantiza el{' '}
+              <strong style={styles.highlight}>cumplimiento normativo y la transparencia</strong>{' '}
+              en la gestión corporativa.
+            </p>
+          </WideCard>
+        </div>
 
-          {/* Two-Column Layout: Table + Image */}
-          <div style={styles.twoColumnContainer}>
-            {/* Left Column - Table */}
-            <div style={styles.leftColumn}>
-              <BusinessInkGoldTable 
-                tableHeaders={auditCommitteeHeaders}
-                tableData={auditCommitteeData}
-              />
-            </div>
-            
-            {/* Right Column - Image */}
-            <div style={styles.rightColumn}>
-              <img 
-                src="./800x400_2.png"
-                alt="Comité de Auditoría"
-                style={styles.sideImage}
-              />
+        {/* 表格 + 图片 两列布局 */}
+        <div style={{ ...styles.section, backgroundColor: theme.colors.background }}>
+          <div style={styles.centeredContainer}>
+            <SectionTitle 
+              title="Comité de Auditoría" 
+              subtitle="INTEGRANTES"
+              align="center"
+            />
+            <div style={styles.twoColumnContainer}>
+              {/* 左列 - 表格 */}
+              <div style={styles.leftColumn}>
+                <Table 
+                  headers={tableHeaders}
+                  data={tableData}
+                  width="100%"
+                />
+              </div>
+              
+              {/* 右列 - 图片 */}
+              <div style={styles.rightColumn}>
+                <img 
+                  src="./photo-1577962917302-cd874c4e31d2.jpeg"
+                  alt="Comité de Auditoría"
+                  style={styles.sideImage}
+                />
+              </div>
             </div>
           </div>
         </div>
+
       </main>
       
-      {/* Footer - Full Width */}
-      <BusinessInkGoldFooter />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
